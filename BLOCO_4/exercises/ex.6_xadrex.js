@@ -1,4 +1,4 @@
-let pecaXadrez = 'RAINHA';
+let pecaXadrez = 'peão';
 let pecaXadrezMin = pecaXadrez.toLowerCase();
 
 switch(pecaXadrezMin){
