@@ -1,31 +1,22 @@
-let nota = 100;
+let nota = 69;
 
-switch(nota){
+if(nota >= 90){
+  console.log('A nota é A');
 
-  case nota >= 90:
-    console.log('Nota A')
-    break;
+}else if(nota >= 80){
+  console.log('A nota é B');
 
-  case nota >= 80:
-    console.log('Nota B')
-    break;  
+}else if(nota >= 70){
+  console.log('A nota é C');
 
-  case nota >= 70:
-    console.log('Nota C')
-    break;
+}else if(nota >= 60){
+  console.log('A nota é D');
 
-  case nota >= 60:
-      console.log('Nota D')
-      break;
+}else if(nota >= 50){
+  console.log('A nota é E');
 
-  case nota >= 50:
-    console.log('Nota E')
-    break;     
-
-  case nota < 50:
-    console.log('Nota F')
-    break;
-
-  default:
-    console.log('Nota não existe!')
+}else if(nota < 50){
+  console.log('A nota é F');
+}else{
+  console.log('Error: a nota não existe!')
 }
