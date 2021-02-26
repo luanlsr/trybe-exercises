@@ -58,4 +58,56 @@ for (let index = 0; index < numbers.length; index += 1){
 }
 
 console.log(higherNumber)
+
 // Exercício 6
+let numbers = [4, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let impar = 0;
+
+for (let index = 0; index < numbers.length; index += 1){
+  
+  if(numbers[index] % 2 != 0){
+    
+    impar += 1;
+  }
+} 
+console.log(impar);
+
+
+
+// Exercício 7
+
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let smallerNumber = numbers[0]
+
+for (let index = 0; index < numbers.length; index += 1){
+  let eachNumber = numbers[index];
+  
+    if(eachNumber < smallerNumber){
+      smallerNumber = eachNumber
+    }      
+}
+
+console.log(smallerNumber)
+
+// Execício 8
+let contagem = []
+
+for (let index = 1; index <= 25; index += 1){
+  contagem.push(index)
+  
+}
+console.log(contagem)
+
+// Exercício 9
+
+let contagem = []
+
+for (let index = 1; index <= 25; index += 1){
+  contagem.push(index)
+  
+}
+for(let div = 0; div < contagem.length; div += 1){
+  let divisao = contagem[div]/2
+  console.log(divisao)
+}
+
