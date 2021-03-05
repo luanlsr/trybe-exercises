@@ -21,7 +21,7 @@
   font-size: xx-large;
 }
 
-.start-race-btn{
+#start-race-btn{
   background-color: blue;
   border-radius: 30px;
   color: white;
@@ -29,6 +29,7 @@
   height: 50px;
   font-size: large;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .center {
@@ -40,3 +41,11 @@
   padding-top: 20px;
   text-align: left;
 }
+
+.winner{
+  image-orientation: 180deg;
+  right: 150px;
+  top: 100px;
+  position: absolute;
+}
+
