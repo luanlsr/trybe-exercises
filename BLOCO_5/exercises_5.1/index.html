@@ -56,39 +56,40 @@
         let changer = document.getElementsByTagName('p')[1];
         changer.innerText = 'Eu estarei formado e em um ótimo emprego';
       }
-      console.log(changeParagaphy())
+      changeParagaphy()
       /*
         2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
       */
-      function changeParagaphy () {
-        let changer = document.getElementsByTagName('p')[1];
-        changer.innerText = 'Eu estarei formado e em um ótimo emprego';
+      function changeColor () {
+        let changer = document.getElementsByClassName('main-content')[0];
+        changer.style.backgroundColor = 'rgb(76,164,109)';
       }
-      console.log(changeParagaphy())
+      changeColor()
         // 3. Crie uma função que mude a cor do quadrado vermelho para branco.
-        function changeParagaphy () {
-        let changer = document.getElementsByTagName('p')[1];
-        changer.innerText = 'Eu estarei formado e em um ótimo emprego';
+      function changeColor2 () {
+        let changer = document.getElementsByClassName('center-content')[0];
+        changer.style.backgroundColor = 'white';
       }
-      console.log(changeParagaphy())
+      changeColor2()
         // 4. Crie uma função que corrija o texto da tag <h1>.
-          function changeParagaphy () {
-        let changer = document.getElementsByTagName('p')[1];
-        changer.innerText = 'Eu estarei formado e em um ótimo emprego';
+      function changeH1 () {
+        let changerText = document.getElementsByTagName('h1')[0];
+        changerText.innerText.replace('JavaEscripito', 'JavaScript');
       }
-      console.log(changeParagaphy())
+      changeH1()
         // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
-          function changeParagaphy () {
-        let changer = document.getElementsByTagName('p')[1];
-        changer.innerText = 'Eu estarei formado e em um ótimo emprego';
+      function changeP () {
+        document.querySelectorAll('p').innerText
+        .toUpperCase();
       }
-      console.log(changeParagaphy())
+      changeP()
         // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-          function changeParagaphy () {
-        let changer = document.getElementsByTagName('p')[1];
-        changer.innerText = 'Eu estarei formado e em um ótimo emprego';
+      function changeAllP () {
+        let changer = document.querySelectorAll('p');
+
+       console.log(changer);
       }
-      console.log(changeParagaphy())
+      changeAllP()
     </script>
   </body>
 </html>

@@ -44,8 +44,11 @@
 
 .winner{
   image-orientation: 180deg;
-  right: 150px;
   top: 100px;
   position: absolute;
+}
+
+.faixaFinal{
+  margin-left: 1600px;
 }
 

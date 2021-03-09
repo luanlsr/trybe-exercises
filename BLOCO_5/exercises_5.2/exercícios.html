@@ -56,9 +56,16 @@
     </style>
   </head>
   <body>
-    <h1>Oi</h1>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI
+      
+      let exercicio = 'Exercício 5.2 - JavaScript DOM';
+      let buscaBody = document.querySelector('body');
+
+      let criaH1 = document.createElement('h1');
+      criaH1.innerText = exercicio;
+
+      buscaBody.appendChild(criaH1);
+      
     </script>
   </body>
 </html>
