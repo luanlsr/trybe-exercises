@@ -1,0 +1,54 @@
+.car1{
+  display: inline-block;
+  background-image: url(./carroAzul-removebg-preview.png);
+  background-size: cover;
+  width: 320px;
+  height: 150px;
+}
+.car2{
+  display: inline-block;
+  background-image: url(./carroVermelho-removebg-preview.png);
+  background-size: cover;
+  width: 320px;
+  height: 170px;
+  margin-top: 30px;
+}
+
+.title-heading {
+  background-color: black;
+  color: red;
+  font-family: monospace;
+  font-size: xx-large;
+}
+
+#start-race-btn{
+  background-color: blue;
+  border-radius: 30px;
+  color: white;
+  width: 200px;
+  height: 50px;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.center {
+  padding: 10px;
+  text-align: center;
+}
+
+.car-section {
+  padding-top: 20px;
+  text-align: left;
+}
+
+.winner{
+  image-orientation: 180deg;
+  top: 100px;
+  position: absolute;
+}
+
+.faixaFinal{
+  margin-left: 1600px;
+}
+
