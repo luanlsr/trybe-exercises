@@ -69,6 +69,7 @@ function averageAge() {
   const ageMedia = books
     .map((book) => book.releaseYear - book.author.birthYear)
     .reduce((acc, curr) => acc + curr)
+
    return ageMedia / books.length
 }
 console.log(averageAge());
