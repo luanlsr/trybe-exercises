@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const Primeiro = () => {
-  return (
-    <h1>Primeiro componente em React</h1>
-  );
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name} {this.props.lastName}</h1>;
+  }
 }
 
-export default Primeiro
+export default Greeting;
