@@ -1,0 +1,56 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 350px;
+  height: 40px;
+  margin: 8px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #9CA3B0;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.form {
+  background-color: #fff;
+  /* box-shadow: 1px 1px 5px black; */
+  padding: 10px;
+  margin-top: 40px;
+  width: 400px;
+  height: 500px;
+}
+
+.button {
+  margin-top: 10px;
+  width: 370px;
+  height: 55px;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #F66963;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.hr {
+  margin-top: 25px;
+  width: 350px;
+}
+
+h3 {
+  color: #9CA3B0;
+}
