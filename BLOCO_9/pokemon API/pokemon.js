@@ -66,20 +66,16 @@ const appendPokemon = (pokemon) => {
 
 const getPokemonPromise = (pokemonName) => {
   return new Promise((resolve, reject) => {
-    if (pokemonName == 'rattat') {
-      reject('Esse pokemon é muito top para essa lista!')
-    } else {
-      fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-      .then((response) => {
-        response.json().then((data) => {
-          appendPokemon(data);
-          resolve();
-        });
+      fetch("http://www.omdbapi.com/?t=matrix")
+      .then(response => {
+        console.log(response);
+        resolve(response)
+      })
+      .catch(err => {
+        console.error(err);
       });
-    }
-  });
-};
-
+  })
+}  
 
 const fetchPokemon = async () => {
   try {
