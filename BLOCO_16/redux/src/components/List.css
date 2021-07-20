@@ -1,0 +1,19 @@
+.tarefas {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.tarefas button {
+  background-color: rgb(90, 228, 124);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.tarefas button:hover {
+  background-color: rgb(131, 233, 157);
+}
