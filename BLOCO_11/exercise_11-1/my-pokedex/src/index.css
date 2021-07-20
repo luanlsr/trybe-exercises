@@ -1,0 +1,12 @@
+body {
+  background: no-repeat url(./Pokemon-logo.jpg);
+  display: flex;
+  background-size: cover;
+  background-attachment: fixed;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  color: white;
+}
