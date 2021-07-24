@@ -68,9 +68,34 @@ SET phone_number = REPLACE(phone_number, '515', '777')
 WHERE phone_number LIKE '515%';
 
 -- 12. Escreva uma query que só exiba as informações dos funcionários cujo o primeiro nome tenha oito ou mais caracteres.
+SELECT * FROM hr.employees
+WHERE FIRST_NAME LIKE '________%';
+
+
 -- 13. Escreva uma query que exiba as seguintes informações de cada funcionário: id , primeiro nome e ano no qual foi contratado (exiba somente o ano).
+SELECT EMPLOYEE_ID, FIRST_NAME, YEAR(HIRE_DATE) FROM hr.employees
+ORDER BY FIRST_NAME;
+
 -- 14. Escreva uma query que exiba as seguintes informações de cada funcionário: id , primeiro nome e dia do mês no qual foi contratado (exiba somente o dia).
+SELECT EMPLOYEE_ID, FIRST_NAME, DAY(HIRE_DATE) FROM hr.employees
+ORDER BY FIRST_NAME;
+
 -- 15. Escreva uma query que exiba as seguintes informações de cada funcionário: id , primeiro nome e mês no qual foi contratado (exiba somente o mês).
+SELECT EMPLOYEE_ID, FIRST_NAME, MONTH(HIRE_DATE) FROM hr.employees
+ORDER BY FIRST_NAME;
+
 -- 16. Escreva uma query que exiba os nomes dos funcionários em letra maiúscula.
+SELECT UCASE(CONCAT(FIRST_NAME, ' ',  LAST_NAME)) FROM hr.employees;
+
+
 -- 17: Escreva uma query que exiba o sobrenome e a data de contratação de todos os funcionário contratados em julho de 1987.
--- 18: Escreva uma query que exiba as seguintes informações de cada funcionário: nome , sobrenome , tempo que trabalha na empresa (em dias) .
+SELECT LAST_NAME, HIRE_DATE FROM hr.employees
+WHERE HIRE_DATE LIKE '1987-07%'
+ORDER BY LAST_NAME;
+
+-- 18: Escreva uma query que exiba as seguintes informações de cada funcionário: nome , sobrenome , tempo que trabalha na empresa (em dias).
+SELECT first_name,
+    last_name,
+    DATEDIFF(CURRENT_DATE() , HIRE_DATE) 'days_worked'
+FROM hr.employees;
+
