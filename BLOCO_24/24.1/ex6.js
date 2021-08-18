@@ -1,0 +1,1 @@
+db.movies.update({title: "Batman"}, {$mul: {imdbRating: NumberInt(5)}})
