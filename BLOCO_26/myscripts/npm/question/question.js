@@ -1,19 +1,18 @@
 const {questionInt} = require('readline-sync');
 const script = questionInt('Qual script deve ser executado: 1, 2 ou 3? ');
-const imc = require('../imc/imc');
 const sorteio = require('../jogoAdvinhacao/sorteio');
+const imc = require('../imc/imc');
 const velMedia = require('../velocidadeMedia/velMedia');
-
 
 function questionScript(script) { 
   if(script === 1){
-    sorteio()
+    return sorteio()
   }
   if(script === 2){
-    imc()
+    return imc()
   }
   if(script === 3){
-    velMedia()
+    return velMedia()
   }
 }
 

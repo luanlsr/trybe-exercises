@@ -7,5 +7,4 @@ function velMedia(distancia, tempo) {
   return velocidadeMedia
 }
 
-
 console.log(velMedia(distancia, tempo));

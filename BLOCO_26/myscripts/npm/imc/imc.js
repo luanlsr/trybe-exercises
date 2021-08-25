@@ -9,7 +9,7 @@ function imc() {
   if(imc < 18.5) {
     return console.log(`Seu IMC é ${imc} | Abaixo do peso (magreza)`)
   }
-  if(imc >= 18.5 && calculoImc() <=24.9) {
+  if(imc >= 18.5 && imc <=24.9) {
     return console.log(`Seu IMC é ${imc} | Peso normal`)
   }
   if(imc >= 25 && imc <= 29.9) {
