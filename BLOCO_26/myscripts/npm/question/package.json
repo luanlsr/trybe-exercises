@@ -1,0 +1,15 @@
+{
+  "name": "question",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node question.js"
+  },
+  "keywords": [],
+  "author": "Luan Ramalho <luanfswd@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
