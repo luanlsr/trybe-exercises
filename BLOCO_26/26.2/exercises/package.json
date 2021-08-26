@@ -9,7 +9,13 @@
     "exercise3": "node exercise3.js",
     "exercise41": "node exercise4.1.js",
     "exercise42": "node exercise4.2.js",
-    "exercise43": "node exercise4.2.js"
+    "exercise43": "node exercise4.3.js",
+    "exercise44": "node exercise4.4.js",
+    "exercise45": "node exercise4.5.js",
+    "exercise46": "node exercise4.6.js",
+    "exercise51": "node exercise5.1.js",
+    "exercise52": "node exercise5.2.js",
+    "exercise53": "node exercise5.3.js"
 
   },
   "keywords": [],

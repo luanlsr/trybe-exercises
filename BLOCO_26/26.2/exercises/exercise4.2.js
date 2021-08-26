@@ -1,7 +1,8 @@
 const fs = require('fs');
 
-let rawdata = fs.readFileSync('simpson.json');
+let rawdata = fs.readFileSync('simpsons.json');
 let simpsons = JSON.parse(rawdata);
+// console.log(simpsons);
 
 const simpsonsPersons = (id) => {
   const simpsonPromise = new Promise((resolve, reject) => { 
