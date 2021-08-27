@@ -6,7 +6,6 @@ async function addNelsonToFamily() {
     .then((fileContent) => JSON.parse(fileContent));
 
   const nelsonMuntz = simpsons.filter(simpson => simpson.name === 'Nelson Muntz');
-  console.log(nelsonMuntz);
 
 
   const reduce = nelsonMuntz.reduce((acc, curr) => {
@@ -23,7 +22,7 @@ async function addNelsonToFamily() {
     simpsonsFamily.push(reduce);
     console.log(simpsonsFamily);
 
-  await fs.writeFile('./simpsonsFamily.json', JSON.stringify(simpsonsFamily));
+  // await fs.writeFile('./simpsonsFamily.json', JSON.stringify(simpsonsFamily));
 }
 
 addNelsonToFamily()
