@@ -2,23 +2,21 @@
 
 
 # Repositório de exercícios
-Aqui você encontra todos os exercícios realizados por _[Guilherme Dornelles](https://www.linkedin.com/in/guilherme-dornelles-97780b200/)_ como estudante da _[Trybe](https://www.betrybe.com/)_ .
-
 
 
 ## Índice:
 ### Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
-* <strong> _[Bloco 01: Unix, Bash e Shell Script](https://github.com/guilhermemd/trybe-exercises/tree/master/exercises/bloco_01)_ </strong>
+* <strong> _[Bloco 01: Unix, Bash e Shell Script]_ </strong>
  - [x] Introdução - Unix & Bash
  - [x] Unix & Bash - Parte 1
  - [x] Unix & Bash - Parte 2
 
-* <strong> _[Bloco 02: Git, GitHub e Internet](https://github.com/guilhermemd/trybe-exercises/tree/master/exercises/bloco_02)_ </strong>
+* <strong> _[Bloco 02: Git, GitHub e Internet]_ </strong>
  - [x] 2.1 - Git & GitHub - O que é e para que serve
  - [x] 2.2 - Git & GitHub - Entendendo os comandos
  - [x] 2.3 - Internet - Entendendo como ela funciona
 
-* <strong> _[Bloco 03: Introdução à HTML e CSS](https://github.com/guilhermemd/trybe-exercises/tree/master/exercises/bloco_03)_ </strong> 
+* <strong> _[Bloco 03: Introdução à HTML e CSS]_ </strong> 
 - [x] 3.1 - HTML & CSS - Estrutura de paginas
 - [x] 3.2 - HTML & CSS - Primeiros passos em CSS
 - [x] 3.3 - HTML & CSS - Seletor e posicionamento
