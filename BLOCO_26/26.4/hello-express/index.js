@@ -58,7 +58,6 @@ const sortedDrinks = drinks.sort((a,b) => {
 })
 
 
-
 app.listen(3001, () => {
   console.log('Aplicação ouvindo na porta 3001');
 });
@@ -100,7 +99,7 @@ app.get('/drinks/search', getDrinksSearch);
 function getDrinksSearch (req, res) {
   const { name } = req.query;
   const filteredDrinks = drinks.filter((r) => r.name.includes(name));
-  res.status(200).json(filteredRecipes);
+  res.status(200).json(filteredDrinks);
 };
 
 app.post('/recipes', getRecipesBody);
