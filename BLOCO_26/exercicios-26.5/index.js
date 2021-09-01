@@ -1,47 +1,36 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const fs = require('fs/promises')
-const rescue = require('express-rescue');
-// const res = require('express/lib/response');
+const requisitos = require('./middlewares/requisitos');
+
 const app = express();
 app.use(bodyParser.json());
 
 const HTTP_OK_STATUS = 200;
 const PORT = '3000';
 
-function getTalker () {
-  return fs.readFile('./talker.json', 'utf-8')
-    .then(fileContent => JSON.parse(fileContent));
-}
-
-const rand=()=>Math.random(0).toString(36).substr(2);
-const token=(length)=>(rand()+rand()+rand()+rand()).substr(0,length);
-
-
 // não remova esse endpoint, e para o avaliador funcionar
 app.get('/', (_request, response) => {
   response.status(HTTP_OK_STATUS).send();
 });
 
-app.post('/login', rescue(async (request, response) => {
-  const { email, password } = request.body
-  if (!email) {
-    return response.status(400).json({ message: 'O campo \"email\" é obrigatório' });
-  }
-  if (!password) {
-    return response.status(400).json({ message: 'O campo \"password\" é obrigatório' });
-  }
-  const re = /\S+@\S+\.\S+/;
-  if (!(re.test(email))) {
-    return response.status(400).json({ message: "O \"email\" deve ter o formato \"email@email.com\"" });
-  }
+const { 
+  getAllTalkers,
+} = requisitos;
 
-  if (!(password >= 6)) {
-    return response.status(400).json({ message: "O \"email\" deve ter o formato \"email@email.com\"" });
-  }
-  
-  response.status(200).json({token: token(16)})
-}))
+app.use(getAllTalkers);
+
+// requisito 1
+app.get('/talker', getAllTalkers);
+
+// requisito 2
+
+// requisito 3
+
+// Erros
+
+// app.use((err, _req, res, _next) => {
+//   res.status(500).json({ error: `Erro: ${err.message}` });
+// });
 
 app.listen(PORT, () => {
   console.log('Online');
