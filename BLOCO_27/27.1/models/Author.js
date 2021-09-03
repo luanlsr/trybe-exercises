@@ -2,25 +2,25 @@
 
 const connection = require('./connection');
 
-// Cria uma string com o nome completo do autor
+// // Cria uma string com o nome completo do autor
 
-const getNewAuthor = (authorData) => {
-const { id, firstName, middleName, lastName } = authorData;
+// const getNewAuthor = (authorData) => {
+// const { id, firstName, middleName, lastName } = authorData;
 
-const fullName = [firstName, middleName, lastName]
-    .filter((name) => name)
-    .join(' ');
+// // const fullName = [firstName, middleName, lastName]
+// //     .filter((name) => name)
+// //     .join(' ');
 
-return {
-    id,
-    firstName,
-    middleName,
-    lastName,
-    name: fullName,
-};
-};
+// return {
+//     id,
+//     firstName,
+//     middleName,
+//     lastName,
+//     // name: fullName,
+// };
+// };
 
-// // Converte o nome dos campos de snake_case para camelCase
+// // // Converte o nome dos campos de snake_case para camelCase
 
 // const serialize = (authorData) => ({
 //     id: authorData.id,
@@ -28,7 +28,7 @@ return {
 //     middleName: authorData.middle_name,
 //     lastName: authorData.last_name});
 
-// Busca todos os autores do banco.
+// // Busca todos os autores do banco.
 
 // const getAll = async () => {
 //     const [authors] = await connection.execute(
@@ -48,7 +48,7 @@ const getAll = async () => {
         .then((db) => db.collection('authors').find().toArray())
             .then((authors) =>
                 authors.map(({ _id, firstName, middleName, lastName }) =>
-                getNewAuthor({
+                ({
                     id: _id,
                     firstName,
                     middleName,
