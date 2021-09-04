@@ -3,6 +3,56 @@ clear
 npm init -y
 echo 'node_modules'>>.gitignore
 echo '.env'>>.gitignore
+touch readme.md
+echo "# Boilerplate
+### _By Luan da Silva Ramalho_
+
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
+
+
+### Objetivo
+
+> Este arquivo tem  objetivo de 
+> diminuir o tempo gasto na inicialização
+> dos projetos.
+
+## Installation
+
+basta copiar o arquivo boilerplate.sh para o repositório do projeto e executar no terminal o seguinte comando:
+
+```sh
+./boilerplate.sh
+```
+
+Após inicializado, entrar no arquivo _package.json_ e adicionar nos scripts a seguinte linha:
+
+```json
+"dev": "nodemon index.js",
+```
+
+## License
+
+MIT
+
+**Free Software, Hell Yeah!**
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+## Connect with me. :smiley:
+
+<div>
+<div align=\"center\">
+<p>
+<a href=\"https://github.com/luanlsr\" target=\"_blank\"><img alt=\"Github\" src=\"https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white\" /></a> 
+<a href=\"https://www.linkedin.com/in/luan-ramalholsr/\" target=\"_blank\"><img alt=\"LinkedIn\" src=\"https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white\" /></a> 
+<a href=\"https://www.instagram.com/luan_ramalholsr/\" target=\"_blank\"><img alt=\"Instagram\" src=\"https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white\" /></a>
+<a href=\"mailto:luan.ramalhosilva@gmail.com\" target=\"_blank\"><img alt=\"Gmail\" src=\"https://img.shields.io/badge/Gmail-%2312100E?style=for-the-badge&logo=Gmail&logoColor=red\" /></a> 
+</p>
+</div>
+">>readme.md
 touch .env
 echo "PORT=3000
 DB_URL='mongodb://localhost:27017'
@@ -29,28 +79,22 @@ npm i nodemon -D
 mkdir docs models services controllers helpers validations middlewares routes config
 cd models
 touch connection.js
-echo "const { MongoClient } = require('mongodb');
+echo "const mongodb = require('mongodb').MongoClient;
+require('dotenv').config();
+const { DB_URL, DB_NAME } = process.env;
 
 const OPTIONS = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }
 
-const MONGO_DB_URL = 'mongodb://127.0.0.1:27017';
-
-let db = null;
-
-const connection = () => {
-    return db
-    ? Promise.resolve(db)
-    : MongoClient.connect(MONGO_DB_URL, OPTIONS)
-    .then((conn) => {
-    db = conn.db('model_example');
-    return db;
-    })
-};
-
-module.exports = connection;">>connection.js
+module.exports = () =>
+    mongodb.connect(DB_URL, OPTIONS)
+    .then((connection) => connection.db(DB_NAME))
+    .catch((err) => {
+        console.log(err);
+        process.exit(1)
+    })">>connection.js
 touch model.js
 cd ..
 cd services
@@ -165,6 +209,6 @@ echo "# Express-Validations:
 * containsNotNumber(nonNumericString)
 * containsNotAlphabets(nonAlphabeticString)
 * isLength(string, minLength, maxLength)
-* isValidURL(url)"
+* isValidURL(url)">>docs.md
 clear
 echo "boilerplate terminado! by Luan da Silva Ramalho | https://github.com/luanlsr"
