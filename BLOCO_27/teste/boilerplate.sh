@@ -4,6 +4,9 @@ npm init -y
 echo 'node_modules'>>.gitignore
 echo '.env'>>.gitignore
 touch .env
+echo "PORT=3000
+DB_URL='mongodb://localhost:27017'
+DB_NAME='databaseName'">>.env
 touch index.js
 echo "const express = require('express');
 const app = express();
@@ -23,7 +26,7 @@ app.listen(PORT, () => {
 ">>index.js
 npm i express express-rescue express-validations body-parser mongodb dotenv
 npm i nodemon -D
-mkdir models services controllers helpers validations middlewares routes config
+mkdir docs models services controllers helpers validations middlewares routes config
 cd models
 touch connection.js
 echo "const { MongoClient } = require('mongodb');
@@ -58,9 +61,68 @@ touch controllerName.js
 cd ..
 cd validations
 touch validations.js
+echo "var expressValidations = require('express-validations')
+
+const {
+  isValidFirstname,
+  isValidMiddlename,
+  isValidLastname,
+  isValidFullname,
+  isStrongPassword,
+  isValidDate,
+  isAlpha,
+  isNumeric,
+  isAlphaNumeric,
+  containsNotNumber,
+  containsNotAlphabets,
+  isLength,
+  isValidURL,
+} = expressValidations
+
+const errors_messages = {
+  firstName_invalid: 'first name is not valid',
+  middleName_invalid: 'middle name is not valid',
+  lastName_invalid: 'last name is not valid',
+  firstName_length: 'first name should have length XXX'
+}
+
+const http_status_code = {
+  HTTP_INVALID_STATUS: 422,
+}
+
+const { HTTP_INVALID_STATUS } = http_status_code
+const { firstName_invalid, middleName_invalid, lastName_invalid, firstName_length } = errors_messages
+
+
+const validate = (params) => {
+  switch (true) {
+    case isValidFirstname(firstName): return { code: HTTP_INVALID_STATUS, message: firstName_invalid}
+    case isLength(firstName, 3, null ): return {code: HTTP_INVALID_STATUS, message: firstName_length}
+    case isValidMiddlename(middleName): return { code: HTTP_INVALID_STATUS, message: middleName_invalid}
+    case isValidLastname(lastName): return { code: HTTP_INVALID_STATUS, message: lastName_invalid}
+  
+    default: return {}
+  }
+
+}
+
+module.exports = validate;">>validations.js
 cd ..
 cd helpers
 touch helpers.js
+echo "const HTTP_OK_STATUS = 200;
+const HTTP_CREATED_STATUS = 201;
+const HTTP_NO_BODY_STATUS = 422;
+const HTTP_401 = 401;
+const HTTP_NOT_FOUND_STATUS = 404;
+
+module.exports = {
+  HTTP_OK_STATUS,
+  HTTP_CREATED_STATUS,
+  HTTP_NO_BODY_STATUS,
+  HTTP_401,
+  HTTP_NOT_FOUND_STATUS,
+}">> helpers.js
 cd ..
 cd routes
 touch router.js
@@ -86,5 +148,23 @@ cd ..
 cd middlewares
 touch middlewareName.js
 cd ..
+cd docs
+touch docs.md
+echo "# Express-Validations:
+## Complete List of Validation Methods
+* isValidEmail(email)
+* isValidFirstname(firstname)
+* isValidMiddlename(middlename)
+* isValidLastname(lastname)
+* isValidFullname(fullname)
+* isStrongPassword(password)
+* isValidDate(date)
+* isAlpha(alphabeticString)
+* isNumeric(numericString)
+* isAlphaNumeric(alphaNumericString)
+* containsNotNumber(nonNumericString)
+* containsNotAlphabets(nonAlphabeticString)
+* isLength(string, minLength, maxLength)
+* isValidURL(url)"
 clear
 echo "boilerplate terminado! by Luan da Silva Ramalho | https://github.com/luanlsr"
