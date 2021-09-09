@@ -1,7 +1,14 @@
 const express = require('express');
+
 const router = express.Router();
 
-const { getAll, findById, create, edit, remove } = require('../controllers/controlerName');
+const {
+  getAll,
+  findById,
+  create,
+  edit,
+  remove,
+} = require('../controllers/controllerName');
 
 router.get('/', getAll);
 
@@ -13,5 +20,6 @@ router.put('/', edit);
 
 router.delete('/', remove);
 
-
 module.exports = router;
+
+

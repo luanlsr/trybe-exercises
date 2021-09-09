@@ -8,7 +8,7 @@ const getAll = () => {
 
 const create = (cep, logradouro, bairro, localidade, uf) => {
   return connection()
-    .then((db) => db.collection('user')
+    .then((db) => db.collection('ceps')
       .insertOne({
         cep,
         logradouro,
