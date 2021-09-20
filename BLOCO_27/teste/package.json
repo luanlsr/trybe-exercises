@@ -16,8 +16,9 @@
     "express-rescue": "^1.1.31",
     "express-validations": "^2.2.3",
     "joi": "^17.4.2",
-    "mongodb": "^4.1.1",
-    "mongoose": "^6.0.5"
+    "joi-password": "^1.6.0",
+    "mongodb": "^4.1.2",
+    "mongoose": "^6.0.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"

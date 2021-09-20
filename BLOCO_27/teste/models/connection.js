@@ -1,15 +1,19 @@
-const mongodb = require('mongodb').MongoClient;
-require('dotenv').config();
-
-const { DB_URL, DB_NAME } = process.env;
+const {DB_URL, DB_NAME} = process.env.DB_URL 
+const { MongoClient } = require('mongodb');
 
 const OPTIONS = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 };
 
-module.exports = () => mongodb.connect(DB_URL, OPTIONS).then((connection) => connection.db(DB_NAME))
-  .catch((err) => {
-    console.log(err);
-    process.exit(1);
-  });
+let db = null;
+
+const connection = () => (db
+    ? Promise.resolve(db)
+    : MongoClient.connect(DB_URL, OPTIONS)
+      .then((conn) => {
+        db = conn.db(DB_NAME);
+        return db;
+      }));
+
+module.exports = connection;

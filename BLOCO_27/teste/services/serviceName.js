@@ -5,14 +5,7 @@ const getAll = async () => model.getAll();
 
 const findById = async (id) => {
   const author = await model.findById(id);
-  if (!author) {
-    return {
-      error: {
-        code: 'notFound',
-        message: 'Something is wrong',
-      },
-    };
-  }
+  
   return author;
 };
 

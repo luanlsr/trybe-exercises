@@ -27,7 +27,7 @@ app.listen(PORT, () => {
   console.log(`acessar http://localhost:3000`);
 });">>index.js
 npm i express express-rescue express-validations body-parser mongodb dotenv joi
-npm i mongoose --save
+npm i mongoose -D
 npm i nodemon -D
 mkdir docs models services controllers helpers validations middlewares routes config
 cd models

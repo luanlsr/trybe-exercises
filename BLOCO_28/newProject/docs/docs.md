@@ -1,0 +1,16 @@
+# Express-Validations:
+## Complete List of Validation Methods
+* isValidEmail(email)
+* isValidFirstname(firstname)
+* isValidMiddlename(middlename)
+* isValidLastname(lastname)
+* isValidFullname(fullname)
+* isStrongPassword(password)
+* isValidDate(date)
+* isAlpha(alphabeticString)
+* isNumeric(numericString)
+* isAlphaNumeric(alphaNumericString)
+* containsNotNumber(nonNumericString)
+* containsNotAlphabets(nonAlphabeticString)
+* isLength(string, minLength, maxLength)
+* isValidURL(url)

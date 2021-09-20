@@ -1,19 +1,56 @@
+const sinon = require('sinon');
 const { expect } = require('chai');
+const { MongoClient } = require('mongodb');
+const { MongoMemoryServer } = require('mongodb-memory-server');
 
-// const fs = require('fs');
-// const sinon = require('sinon');
+const MoviesModel = require('../../models/movieModel');
+const mongoConnection = require('../../models/connection');
+describe('Insere um novo filme no BD', () => {
 
-// sinon.stub(fs, 'readFileSync')
-//   .returns('Valor a ser retornado');
+  let connectionMock;
+  
+  const payloadMovie = {
+    title: 'Example Movie',
+    directedBy: 'Jane Dow',
+    releaseYear: 1999,
+  }
 
-describe('A API deverá permitir a inserção de filmes no banco de dados', () => {
-  it('Ela deve receber e registrar as seguintes informações do filme: Nome , Direção e Ano de lançamento', () => {
-    const {name, direction, releaseYear} = 
-    //
-    expect(resposta).to.be.equals('reprovado');
+  before(async () => {
+    const DBServer = new MongoMemoryServer();
+    const URLMock = await DBServer.getUri();
+
+    connectionMock = await MongoClient
+      .connect(URLMock, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      })
+      .then((conn) => conn.db('model_example'));
+
+    sinon.stub(mongoConnection, 'getConnection').resolves(connectionMock);
   });
-  it('Ao realizar a inserção de um novo filme, o endpoint deverá responder com o respectivo ID', () => {
-    //
-    expect(resposta).to.be.equals('reprovado');
+
+  /* Restauraremos a função `getConnection` original após os testes. */
+  after(() => {
+    mongoConnection.getConnection.restore();
+  });
+
+  describe('quando é inserido com sucesso', () => {
+    it('retorna um objeto', async () => {
+      const response = await MoviesModel.create(payloadMovie);
+
+      expect(response).to.be.a('object')
+    });
+
+    it('tal objeto possui o "id" do novo filme inserido', async () => {
+      const response = await MoviesModel.create(payloadMovie);
+
+      expect(response).to.have.a.property('id')
+    });
+
+    it('deve existir um filme com o título cadastrado!', async () => {
+      await MoviesModel.create(payloadMovie);
+      const movieCreated = await connectionMock.collection('movies').findOne({ title: payloadMovie.title });
+      expect(movieCreated).to.be.not.null;
+    });
   });
 });
