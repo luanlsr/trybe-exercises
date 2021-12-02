@@ -164,49 +164,49 @@
 - [x] 26.1 - NodeJS - Introdução
 - [x] 26.2 - NodeJS - Fluxo Assíncrono
 - [x] 26.3 - NodeJS - Testes com NodeJS
-- [ ] 26.4 - Express: HTTP com Node.js
-- [ ] 26.5 - Práticando Express
-- [ ] 26.6 - Projeto - Crush Manager
+- [x] 26.4 - Express: HTTP com Node.js
+- [x] 26.5 - Práticando Express
+- [x] 26.6 - Projeto - Crush Manager
 
 * <strong> Bloco 27: NodeJS: Camada de Serviço e Arquitetura e Restful </strong>
-- [ ] 27.1 - Arquitetura de Software - Camada de Model
-- [ ] 27.2 - Arquitetura de Software - Camada de Controller Service
-- [ ] 27.3 - Arquiterura Web - Rest e Restful
-- [ ] 27.4 - Projeto - Store Manager
+- [x] 27.1 - Arquitetura de Software - Camada de Model
+- [x] 27.2 - Arquitetura de Software - Camada de Controller Service
+- [x] 27.3 - Arquiterura Web - Rest e Restful
+- [x] 27.4 - Projeto - Store Manager
 
 * <strong> Bloco 28: Autenticação e Upload de Arquivos </strong>
-- [ ] 28.1 - NodeJS - JWT - (JSON Web Token)
-- [ ] 28.2 - NodeJS - Upload de arquivos com Multer
-- [ ] 28.3 - Projeto - Cookmaster
+- [x] 28.1 - NodeJS - JWT - (JSON Web Token)
+- [x] 28.2 - NodeJS - Upload de arquivos com Multer
+- [x] 28.3 - Projeto - Cookmaster
 
 * <strong> Bloco 29: Deployment </strong>
-- [ ] 29.1 -Infraestrutura - Deploy com Heroku
-- [ ] 29.2 - Deploy - Gerenciadores de Processos
-- [ ] 29.3 - Projeto - Stranger Things
+- [x] 29.1 -Infraestrutura - Deploy com Heroku
+- [x] 29.2 - Deploy - Gerenciadores de Processos
+- [x] 29.3 - Projeto - Stranger Things
 
 * <strong> Bloco 30: Projeto Trybeer </strong>
-- [ ] 30.1 - Projeto - Trybeer
+- [x] 30.1 - Projeto - Trybeer
 
 * <strong> Bloco 31: Arquitetura: SOLID e ORM </strong>
-- [ ] 31.1 - Arquitetura - Princípios SOLID
-- [ ] 31.2 - ORM - Interface da aplicação com banco de dados
-- [ ] 31.3 - ORM - Associations
-- [ ] 31.4 - Boas práticas na escrita de testes
-- [ ] 31.5 - Projeto - API de Blogs
+- [x] 31.1 - Arquitetura - Princípios SOLID
+- [x] 31.2 - ORM - Interface da aplicação com banco de dados
+- [x] 31.3 - ORM - Associations
+- [x] 31.4 - Boas práticas na escrita de testes
+- [x] 31.5 - Projeto - API de Blogs
 
 * <strong> Bloco 32: Sockets </strong>
-- [ ] 32.1 - Arquitetura de Software - Camada de View
-- [ ] 32.2 - Sockets - TCP/UDP & NET
-- [ ] 32.3 - Sockets - Sockets.io
-- [ ] 32.4 - Projeto - Webchat
+- [x] 32.1 - Arquitetura de Software - Camada de View
+- [x] 32.2 - Sockets - TCP/UDP & NET
+- [x] 32.3 - Sockets - Sockets.io
+- [x] 32.4 - Projeto - Webchat
 
 * <strong> Bloco 33: Projeto Trybeer II </strong>
-- [ ] Projeto - Trybeer v2
+- [x] Projeto - Trybeer v2
 
 ### Ciencia da Computação :hourglass_flowing_sand:
 
 * <strong> Bloco 34: Arquitetura de Computadores e Redes </strong>
-- [ ] 34.1 - Arquitetura de Computadores
+- [x] 34.1 - Arquitetura de Computadores
 - [ ] 34.2 - Arquitetura de redes
 - [ ] 34.3 - Redes de computadores, ferramentas e segurança
 - [ ] 34.4 - Projeto - Explorando os protocolos
