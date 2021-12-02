@@ -1,0 +1,29 @@
+{
+  "name": "exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "exercise1": "node exercise1.js",
+    "exercise2": "node exercise2.js",
+    "exercise3": "node exercise3.js",
+    "exercise41": "node exercise4.1.js",
+    "exercise42": "node exercise4.2.js",
+    "exercise43": "node exercise4.3.js",
+    "exercise44": "node exercise4.4.js",
+    "exercise45": "node exercise4.5.js",
+    "exercise46": "node exercise4.6.js",
+    "exercise51": "node exercise5.1.js",
+    "exercise52": "node exercise5.2.js",
+    "exercise53": "node exercise5.3.js"
+
+  },
+  "keywords": [],
+  "author": "Luan Ramalho <luanfswd@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2"
+  }
+}

@@ -160,6 +160,9 @@ db.vendas.aggregate([
     }
   },
   {
+    $unwind: "$vendaCliente"
+  },
+  {
     $project: {
       year: {
         $year: "$dataVenda"
@@ -168,9 +171,6 @@ db.vendas.aggregate([
       nome: "$vendaCliente.nome",
       _id: 0
     }
-  },
-  {
-    $unwind: "$vendaCliente"
   },
   {
     $match: {

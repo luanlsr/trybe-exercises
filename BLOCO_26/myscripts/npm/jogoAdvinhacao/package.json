@@ -1,0 +1,15 @@
+{
+  "name": "jogoAdvinhacao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sorteio": "node sorteio.js"
+  },
+  "keywords": [],
+  "author": "Luan Ramalho <luanfswd@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
